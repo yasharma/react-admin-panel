@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import BrandLogo from '../../assets/images/robust-logo-light.png';
-import UserAvatar from '../../assets/images/avatar-s-1.png';
+import BrandSmallLogo from '../../assets/images/robust-logo-small.png';
+import UserAvatar_1 from '../../assets/images/avatar-s-1.png';
+import UserAvatar_2 from '../../assets/images/avatar-s-2.png';
+import CarouselImage from '../../assets/images/05.jpg';
 const style = {
 	height: '440px'
 }
@@ -15,7 +18,7 @@ class Home extends Component {
 				        <li className="nav-item mobile-menu hidden-md-up float-xs-left"><a className="nav-link nav-menu-main menu-toggle hidden-xs"><i className="icon-menu5 font-large-1"></i></a></li>
 				        <li className="nav-item">
 				        	<a className="navbar-brand nav-link">
-				        		<img alt="branding logo" src={BrandLogo} data-expand={BrandLogo} data-collapse="../../app-assets/images/logo/robust-logo-small.png" className="brand-logo" />
+				        		<img alt="branding logo" src={BrandLogo} data-expand={BrandLogo} data-collapse={BrandSmallLogo} className="brand-logo" />
 								{/*<h3 className="text-logo">Administrative</h3>*/}			        		
 				        	</a>
 				        </li>
@@ -82,7 +85,7 @@ class Home extends Component {
 				              </li>
 				              <li className="list-group scrollable-container"><a className="list-group-item">
 				                  <div className="media">
-				                    <div className="media-left"><span className="avatar avatar-sm avatar-online rounded-circle"><img src={UserAvatar} alt="avatar" /><i></i></span></div>
+				                    <div className="media-left"><span className="avatar avatar-sm avatar-online rounded-circle"><img src={UserAvatar_1} alt="avatar" /><i></i></span></div>
 				                    <div className="media-body">
 				                      <h6 className="media-heading">Margaret Govan</h6>
 				                      <p className="notification-text font-small-3 text-muted">I like your portfolio, let's start the project.</p><small>
@@ -90,7 +93,7 @@ class Home extends Component {
 				                    </div>
 				                  </div></a><a className="list-group-item">
 				                  <div className="media">
-				                    <div className="media-left"><span className="avatar avatar-sm avatar-busy rounded-circle"><img src="../../app-assets/images/portrait/small/avatar-s-2.png" alt="avatar" /><i></i></span></div>
+				                    <div className="media-left"><span className="avatar avatar-sm avatar-busy rounded-circle"><img src={UserAvatar_2} alt="avatar" /><i></i></span></div>
 				                    <div className="media-body">
 				                      <h6 className="media-heading">Bret Lezama</h6>
 				                      <p className="notification-text font-small-3 text-muted">I have seen your work, there is</p><small>
@@ -98,7 +101,7 @@ class Home extends Component {
 				                    </div>
 				                  </div></a><a className="list-group-item">
 				                  <div className="media">
-				                    <div className="media-left"><span className="avatar avatar-sm avatar-online rounded-circle"><img src="../../app-assets/images/portrait/small/avatar-s-3.png" alt="avatar"/><i></i></span></div>
+				                    <div className="media-left"><span className="avatar avatar-sm avatar-online rounded-circle"><img src={UserAvatar_1} alt="avatar"/><i></i></span></div>
 				                    <div className="media-body">
 				                      <h6 className="media-heading">Carie Berra</h6>
 				                      <p className="notification-text font-small-3 text-muted">Can we have call in this week ?</p><small>
@@ -106,7 +109,7 @@ class Home extends Component {
 				                    </div>
 				                  </div></a><a className="list-group-item">
 				                  <div className="media">
-				                    <div className="media-left"><span className="avatar avatar-sm avatar-away rounded-circle"><img src="../../app-assets/images/portrait/small/avatar-s-6.png" alt="avatar"/><i></i></span></div>
+				                    <div className="media-left"><span className="avatar avatar-sm avatar-away rounded-circle"><img src={UserAvatar_2} alt="avatar"/><i></i></span></div>
 				                    <div className="media-body">
 				                      <h6 className="media-heading">Eric Alsobrook</h6>
 				                      <p className="notification-text font-small-3 text-muted">We have project party this saturday night.</p><small>
@@ -116,7 +119,7 @@ class Home extends Component {
 				              <li className="dropdown-menu-footer"><a className="dropdown-item text-muted text-xs-center">Read all messages</a></li>
 				            </ul>
 				          </li>
-				          <li className="dropdown dropdown-user nav-item"><a  data-toggle="dropdown" className="dropdown-toggle nav-link dropdown-user-link"><span className="avatar avatar-online"><img src={UserAvatar} alt="avatar"/><i></i></span><span className="user-name">John Doe</span></a>
+				          <li className="dropdown dropdown-user nav-item"><a  data-toggle="dropdown" className="dropdown-toggle nav-link dropdown-user-link"><span className="avatar avatar-online"><img src={UserAvatar_1} alt="avatar"/><i></i></span><span className="user-name">John Doe</span></a>
 				            <div className="dropdown-menu dropdown-menu-right"><a  className="dropdown-item"><i className="icon-head"></i> Edit Profile</a><a  className="dropdown-item"><i className="icon-mail6"></i> My Inbox</a><a  className="dropdown-item"><i className="icon-clipboard2"></i> Task</a><a  className="dropdown-item"><i className="icon-calendar5"></i> Calender</a>
 				              <div className="dropdown-divider"></div><a  className="dropdown-item"><i className="icon-power3"></i> Logout</a>
 				            </div>
@@ -663,7 +666,7 @@ class Home extends Component {
 						        <div className="col-xl-4 col-md-6 col-sm-12">
 						            <div className="card" style={style}>
 						                <div className="card-body">
-						                    <img className="card-img-top img-fluid" src="../../app-assets/images/carousel/05.jpg" alt="Card cap" />
+						                    <img className="card-img-top img-fluid" src={CarouselImage} alt="Card cap" />
 						                    <div className="card-block">
 						                        <h4 className="card-title">Basic</h4>
 						                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -718,13 +721,13 @@ class Home extends Component {
 						                        </ol>
 						                        <div className="carousel-inner" role="listbox">
 						                            <div className="carousel-item">
-						                                <img src="../../app-assets/images/carousel/02.jpg" alt="First slide"/>
+						                                <img src={CarouselImage} alt="First slide"/>
 						                            </div>
 						                            <div className="carousel-item active">
-						                                <img src="../../app-assets/images/carousel/03.jpg" alt="Second slide"/>
+						                                <img src={CarouselImage} alt="Second slide"/>
 						                            </div>
 						                            <div className="carousel-item">
-						                                <img src="../../app-assets/images/carousel/01.jpg" alt="Third slide"/>
+						                                <img src={CarouselImage} alt="Third slide"/>
 						                            </div>
 						                        </div>
 						                        <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

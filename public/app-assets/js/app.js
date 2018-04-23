@@ -178,7 +178,9 @@
     });
 
     // Add Children Class
-    $('.navigation').find('li').has('ul').addClass('has-sub');
+    setTimeout(function(){
+        $('.navigation').find('li').has('ul').addClass('has-sub');
+    },2500);    
 
     $('.carousel').carousel({
       interval: 2000
