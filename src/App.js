@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router} from './router.jsx';
+import {Router} from './router';
 
 const App = props => {
     const { history } = props;
