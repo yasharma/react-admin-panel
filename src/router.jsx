@@ -8,7 +8,6 @@ import Home from 'components/Home/index.jsx';
 //import Footer from '../components/partials/Footer';
 export const Router = props => {
 	const { history } = props;
-	console.log("process.env.NODE_PATH", process.env)
 	return (
 		<ConnectedRouter history={history}>
 		<div> 
