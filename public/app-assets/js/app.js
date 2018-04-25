@@ -51,44 +51,12 @@
 
         });
 
-        // Toggle fullscreen
-        $('a[data-action="expand"]').on('click',function(e){
-            e.preventDefault();
-            $(this).closest('.card').find('[data-action="expand"] i').toggleClass('icon-expand2 icon-contract');
-            $(this).closest('.card').toggleClass('card-fullscreen');
-        });
-
         //  Notifications & messages scrollable
         if($('.scrollable-container').length > 0){
             $('.scrollable-container').perfectScrollbar({
                 theme:"dark"
             });
         }
-
-        // Reload Card
-        $('a[data-action="reload"]').on('click',function(){
-            var block_ele = $(this).closest('.card');
-
-            // Block Element
-            block_ele.block({
-                message: '<div class="icon-spinner9 icon-spin icon-lg"></div>',
-                timeout: 2000, //unblock after 2 seconds
-                overlayCSS: {
-                    backgroundColor: '#FFF',
-                    cursor: 'wait',
-                },
-                css: {
-                    border: 0,
-                    padding: 0,
-                    backgroundColor: 'none'
-                }
-            });
-        });
-
-        // Close Card
-        $('a[data-action="close"]').on('click',function(){
-            $(this).closest('.card').removeClass().slideUp('fast');
-        });
 
         // Match the height of each card in a row
         setTimeout(function(){
@@ -135,19 +103,6 @@
         var chartjsDiv = $('.chartjs'),
         canvasHeight = chartjsDiv.children('canvas').attr('height');
         chartjsDiv.css('height', canvasHeight);
-
-        if($('body').hasClass('boxed-layout')){
-            if($('body').hasClass('vertical-overlay-menu') || $('body').hasClass('vertical-compact-menu')){
-               var menuWidth= $('.main-menu').width();
-               var contentPosition = $('.app-content').position().left;
-               var menuPositionAdjust = contentPosition-menuWidth;
-               if($('body').hasClass('menu-flipped')){
-                    $('.main-menu').css('right',menuPositionAdjust+'px');
-               }else{
-                    $('.main-menu').css('left',menuPositionAdjust+'px');
-               }
-            }
-        }
     });
 
 
@@ -186,26 +141,7 @@
       interval: 2000
     });
 
-    // Page full screen
-    $('.nav-link-expand').on('click', function(e) {
-        if (typeof screenfull != 'undefined'){
-            if (screenfull.enabled) {
-                screenfull.toggle();
-            }
-        }
-    });
-    if (typeof screenfull != 'undefined'){
-        if (screenfull.enabled) {
-            $(document).on(screenfull.raw.fullscreenchange, function(){
-                if(screenfull.isFullscreen){
-                    $('.nav-link-expand').find('i').toggleClass('icon-contract icon-expand2');
-                }
-                else{
-                    $('.nav-link-expand').find('i').toggleClass('icon-expand2 icon-contract');
-                }
-            });
-        }
-    }
+
 
     // Update manual scroller when window is resized
     $(window).resize(function() {
