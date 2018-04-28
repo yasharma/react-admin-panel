@@ -12,9 +12,10 @@ import Sidebar from 'components/Partials/Sidebar.jsx';
 // Application components
 import Home from 'components/Home';
 import Login from 'components/Login';
+import User from 'components/User';
 
 // App routes
-import { login } from 'routes/pathname';
+import { login, user } from 'routes/pathname';
 
 export const Router = props => {
   const { history } = props;
@@ -34,6 +35,7 @@ export const Router = props => {
               <Switch>
                 <Route path="/" exact={true} component={Home} />
                 <Route path={login} component={Login} />
+                <Route path={user} component={User} />
               </Switch>
             </div>
           </div>

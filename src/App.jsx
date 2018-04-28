@@ -23,11 +23,13 @@ import './assets/css/style.css';
 import { login } from 'routes/pathname';
 import { matchPathname } from 'lib/Helper';
 
+import { connect } from 'react-redux';
+
 class App extends Component {
-  componentDidMount() {
+  componentWillReceiveProps(newProps) {
     const {
       location: { pathname }
-    } = this.props.history;
+    } = newProps.router;
     //login --- vertical-layout vertical-menu 1-column  blank-page blank-page
 
     // other - vertical-layout vertical-menu 2-columns  fixed-navbar
@@ -49,4 +51,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({ router }) => {
+  return {
+    router
+  };
+};
+export default connect(mapStateToProps)(App);

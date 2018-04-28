@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import LogoDark from 'assets/images/robust-logo-dark.png';
 import 'assets/css/login-register.css';
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
+// icon-spinner2 spinner
 class Login extends Component {
+  constructor() {
+    super();
+    this.onLogin = this.onLogin.bind(this);
+  }
+  onLogin(e) {
+    e.preventDefault();
+    this.props.dispatch(push('/'));
+  }
   render() {
     return (
       <section className="flexbox-container">
@@ -19,11 +30,7 @@ class Login extends Component {
             </div>
             <div className="card-body collapse in">
               <div className="card-block">
-                <form
-                  className="form-horizontal form-simple"
-                  action="index.html"
-                  noValidate
-                >
+                <form className="form-horizontal form-simple" noValidate>
                   <fieldset className="form-group position-relative has-icon-left mb-0">
                     <input
                       type="text"
@@ -67,6 +74,7 @@ class Login extends Component {
                   </fieldset>
                   <button
                     type="submit"
+                    onClick={this.onLogin}
                     className="btn btn-primary btn-lg btn-block"
                   >
                     <i className="icon-unlock2" /> Login
@@ -96,4 +104,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect()(Login);

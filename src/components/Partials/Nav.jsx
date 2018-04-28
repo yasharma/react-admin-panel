@@ -1,6 +1,5 @@
 import React from 'react';
-import BrandLogo from 'assets/images/robust-logo-light.png';
-import BrandSmallLogo from 'assets/images/robust-logo-small.png';
+import BrandSmallLogo from 'assets/images/logo-light-sm.png';
 import UserAvatar_1 from 'assets/images/avatar-s-1.png';
 import UserAvatar_2 from 'assets/images/avatar-s-2.png';
 
@@ -24,12 +23,12 @@ const Nav = ({ history: { location } }) => {
                 <a className="navbar-brand nav-link">
                   <img
                     alt="branding logo"
-                    src={BrandLogo}
-                    data-expand={BrandLogo}
+                    src={BrandSmallLogo}
+                    data-expand={BrandSmallLogo}
                     data-collapse={BrandSmallLogo}
                     className="brand-logo"
                   />
-                  {/*<h3 className="text-logo">Administrative</h3>*/}
+                  <h3 className="brand-text">Administrator</h3>
                 </a>
               </li>
               <li className="nav-item hidden-md-up float-xs-right">

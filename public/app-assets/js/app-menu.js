@@ -8,7 +8,7 @@
   Author: GeeksLabs
   Author URL: http://www.themeforest.net/user/geekslabs
 ==========================================================================================*/
-(function(window, document, $) {
+(function (window, document, $) {
   'use strict';
 
   $.app = $.app || {};
@@ -557,7 +557,7 @@
           }
         }
 
-        e.stopPropagation();
+        //e.stopPropagation();
       });
 
       $('.main-menu-content').on('mouseleave', function(){
@@ -599,7 +599,7 @@
                 $listItem.siblings('.open').trigger('close.app.menu');
               }
 
-              e.stopPropagation();
+              //e.stopPropagation();
             }
           } else {
             if (!$listItem.is('.active')) {
@@ -609,7 +609,7 @@
           }
         }
 
-        e.stopPropagation();
+        //e.stopPropagation();
       });
     },
 

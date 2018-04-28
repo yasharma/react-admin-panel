@@ -1,4 +1,21 @@
-h3.text-logo {
-	color: #fff;
-	font-weight: 600;
+body.vertical-layout.vertical-menu.menu-expanded
+  .navbar
+  .navbar-brand
+  .brand-text {
+  animation: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
+}
+body.vertical-layout.vertical-menu.menu-collapsed
+  .navbar
+  .navbar-brand
+  .brand-text {
+  animation: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadeout;
+}
+.header-navbar .navbar-header .navbar-brand .brand-text {
+  display: inline;
+  padding-left: 6px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.header-navbar.navbar-semi-dark .navbar-nav .nav-link .brand-text {
+  color: #ffffff;
 }
