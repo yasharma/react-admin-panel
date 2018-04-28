@@ -1,16 +1,12 @@
 import axios from 'axios';
 import lodash from 'lodash';
 import moment from 'moment';
-import jQuery from 'jquery';
 //import {Cookie} from './lib/Cookie';
 
 /* Global variables */
 window.axios = axios;
 window._ = lodash;
 window.moment = moment;
-window.$ = jQuery;
-window.jQuery = window.$;
-
 window.axios.defaults.headers.common = { 'X-Requested-With': 'XMLHttpRequest' };
 window.axios.defaults.baseURL =
   process.env.NODE_ENV !== 'production'
